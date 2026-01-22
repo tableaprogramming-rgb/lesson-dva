@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1: Visual Audit & Redesign | Digital Visual Arts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <style>
+        .assignment-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 100px;
+            background: var(--gradient-1);
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        .assignment-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .assignment-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+        }
+
+        .assignment-meta strong {
+            color: var(--primary-light);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 4rem 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        .instruction-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .instruction-card:hover {
+            border-color: var(--primary);
+        }
+
+        .instruction-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .instruction-card p,
+        .instruction-card li {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .instruction-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .instruction-card li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .output-format {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px dashed var(--primary);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .output-format h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="assignment-container">
+        <a href="../../index.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Course Hub
+        </a>
+
+        <header class="assignment-header">
+            <div class="role-badge">Senior Digital Design Consultant</div>
+            <h1 class="gradient-text">Visual Audit and Redesign Strategy</h1>
+            <div class="assignment-meta">
+                <span><strong>Task:</strong> Digital Surgery</span>
+                <span><strong>Course:</strong> Digital Visual Design (DVA)</span>
+            </div>
+        </header>
+
+        <section>
+            <div class="instruction-card">
+                <h3>Project Context</h3>
+                <p>In this assignment, you transition from student to consultant. You are tasked with identifying a
+                    real-world design failure—sourced from Google Street View—and performing "Digital Surgery" to
+                    transform it into a professional, effective piece of visual communication.</p>
+            </div>
+        </section>
+
+        <h2 class="section-title"><span>01.</span> Diagnostic Analysis</h2>
+        <section class="grid-container"
+            style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 0;">
+            <div class="instruction-card">
+                <h3>Hierarchy & Contrast</h3>
+                <ul>
+                    <li><strong>Typographic Hierarchy:</strong> Identify if the focal point is missing or if elements
+                        are competing for attention.</li>
+                    <li><strong>Contrast & Legibility:</strong> Evaluate the color choices and text readability from a
+                        distance.</li>
+                </ul>
+            </div>
+            <div class="instruction-card">
+                <h3>Noise & Technicals</h3>
+                <ul>
+                    <li><strong>Visual Noise:</strong> Note any unnecessary clutter, images, or "vibrating" colors.</li>
+                    <li><strong>Technical Errors:</strong> Look for poor kerning (letter spacing), leading (line
+                        spacing), or alignment issues.</li>
+                </ul>
+            </div>
+        </section>
+
+        <h2 class="section-title"><span>02.</span> Improvement Strategy</h2>
+        <section class="grid-container"
+            style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); margin-top: 0;">
+            <div class="instruction-card">
+                <h3>Structure & Flow</h3>
+                <ul>
+                    <li><strong>Hierarchy:</strong> Explain how to use scale and weight to create a clear focal point.
+                    </li>
+                    <li><strong>Composition:</strong> Explain how to use a Grid System and Negative Space to reduce
+                        clutter.</li>
+                </ul>
+            </div>
+            <div class="instruction-card">
+                <h3>Aesthetics & Utility</h3>
+                <ul>
+                    <li><strong>Typography:</strong> Suggest specific font styles (e.g., Sans-Serif) for better
+                        street-level readability.</li>
+                    <li><strong>Color Theory:</strong> Recommend a high-contrast color palette (e.g., 60-30-10 rule).
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="output-format">
+            <h4>Final Output Format</h4>
+            <p>Your submission must be divided into two clear sections:</p>
+            <ul style="list-style: none; margin-top: 1rem;">
+                <li><strong>1. The Diagnosis:</strong> A detailed breakdown of the "Bad" elements identified in your
+                    chosen reference.</li>
+                <li><strong>2. The Digital Surgery:</strong> A step-by-step technical plan for improvements in Photoshop
+                    or Illustrator.</li>
+            </ul>
+        </section>
+
+        <footer style="margin-top: 6rem; text-align: center; color: var(--text-muted);">
+            <p>&copy; 2026 Digital Visual Arts | School of Computer Studies</p>
+        </footer>
+    </div>
+</body>
+
+</html>

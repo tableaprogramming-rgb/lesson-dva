@@ -23,7 +23,8 @@ This course focuses on proficiency in tools and techniques for planning, designi
 
 <br>• **Memento:** Collecting and representing childhood memories.<br>
 
-<br>• **Post I’m Alone Cards:** Postcard design exercise. |
+<br>• **Post I’m Alone Cards:** Postcard design exercise.<br>
+<br>• **Visual Audit:** Digital surgery on real-world designs. |
 |  | **2. Poster Design** | • **Social Issue Poster:** Visual communication for social awareness.<br>
 
 <br>• **Parody Poster:** Creative reinterpretation of media. |
