@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography — Digital Visual Arts Module 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #563d7c 0%, #7c5ba3 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+            box-shadow: 0 8px 24px rgba(86, 61, 124, 0.2);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        header .subtitle {
+            font-size: 24px;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        header .breadcrumb {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        /* NAVIGATION */
+        .nav-link-back {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background-color: #e9ecef;
+            color: #563d7c;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link-back:hover {
+            background-color: #dee2e6;
+        }
+
+        /* SECTIONS */
+        section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            color: #563d7c;
+            font-size: 32px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #563d7c;
+            padding-bottom: 15px;
+        }
+
+        section h3 {
+            color: #0056b3;
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        section h4 {
+            color: #666;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* GRIDS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 25px 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* CARDS */
+        .card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            border-left: 4px solid #563d7c;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(86, 61, 124, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            color: #563d7c;
+        }
+
+        /* VISUAL EXAMPLES */
+        .example-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .example-image {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px auto;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* COMPARISON */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .comparison-item h4 {
+            margin-top: 0;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #563d7c;
+        }
+
+        .comparison-item.sans-serif h4 {
+            border-bottom-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* TYPE ANATOMY */
+        .anatomy-container {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .anatomy-visual {
+            font-size: 120px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #333;
+            text-align: center;
+            position: relative;
+            padding: 40px 0;
+            font-family: Georgia, serif;
+        }
+
+        .anatomy-label {
+            position: absolute;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            background: #563d7c;
+            padding: 4px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .anatomy-label.baseline {
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .anatomy-label.cap-height {
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .anatomy-label.x-height {
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .anatomy-labels-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .label-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #0056b3;
+        }
+
+        .label-item strong {
+            color: #563d7c;
+        }
+
+        /* SPACING DEMONSTRATION */
+        .spacing-demo {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+
+        .kerning-before {
+            letter-spacing: 0.05em;
+            font-size: 40px;
+            font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        .kerning-after {
+            letter-spacing: -0.02em;
+            font-size: 40px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .label {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        /* HIERARCHY */
+        .hierarchy-visual {
+            margin: 30px 0;
+        }
+
+        .hierarchy-level {
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            color: white;
+            position: relative;
+        }
+
+        .hierarchy-level.primary {
+            background: linear-gradient(135deg, #563d7c 0%, #7c5ba3 100%);
+            font-size: 48px;
+            font-weight: 800;
+        }
+
+        .hierarchy-level.secondary {
+            background: linear-gradient(135deg, #0056b3 0%, #0074d9 100%);
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .hierarchy-level.tertiary {
+            background: linear-gradient(135deg, #6c757d 0%, #8390a0 100%);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .hierarchy-level.quaternary {
+            background: #f8f9fa;
+            border: 2px dashed #999;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .hierarchy-description {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        /* ALERTS */
+        .alert {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid;
+        }
+
+        .alert.info {
+            background-color: #e8f4f8;
+            border-color: #0056b3;
+            color: #0056b3;
+        }
+
+        .alert.warning {
+            background-color: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+
+        .alert.success {
+            background-color: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+
+        /* LISTS */
+        ul,
+        ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* BLOCKQUOTE */
+        blockquote {
+            border-left: 4px solid #563d7c;
+            padding: 20px;
+            margin: 25px 0;
+            background: #f8f9fa;
+            font-size: 16px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* LINKS */
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #003d82;
+            text-decoration: underline;
+        }
+
+        /* RESOURCES */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .resource-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0056b3;
+        }
+
+        .resource-card h4 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+
+        .resource-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #0056b3;
+            color: white;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .resource-card a:hover {
+            background: #003d82;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            color: #666;
+            margin-top: 60px;
+            border-top: 4px solid #563d7c;
+        }
+
+        /* TABLE OF CONTENTS */
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #563d7c;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #563d7c;
+        }
+
+        .toc ul {
+            margin-top: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- NAVIGATION BACK TO CANVAS -->
+        <a href="typography.html" class="nav-link-back">← Back to Interactive Introduction</a>
+
+        <!-- HEADER -->
+        <header>
+            <h1>TYPOGRAPHY</h1>
+            <p class="subtitle">Letters as Visual Language</p>
+            <p class="breadcrumb">Module 3 — Digital Visual Arts</p>
+        </header>
+
+        <!-- TABLE OF CONTENTS -->
+        <section class="toc">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#what-is">What is Typography?</a></li>
+                <li><a href="#history">A Brief History of Type</a></li>
+                <li><a href="#classifications">Typeface Classifications</a></li>
+                <li><a href="#anatomy">Type Anatomy</a></li>
+                <li><a href="#spacing">The Three Spacings</a></li>
+                <li><a href="#hierarchy">Visual Hierarchy</a></li>
+                <li><a href="#formats">Typography Formats</a></li>
+                <li><a href="#pairing">Typeface Pairing</a></li>
+                <li><a href="#accessibility">Accessible Typography</a></li>
+                <li><a href="#resources">Resources & References</a></li>
+            </ul>
+        </section>
+
+        <!-- SECTION 1: WHAT IS TYPOGRAPHY -->
+        <section id="what-is">
+            <h2>What is Typography?</h2>
+
+            <div class="alert info">
+                <strong>Many beginners think:</strong> "Typography = picking a font." <br />
+                <strong>Reality:</strong> Typography is the entire system of how text is arranged, spaced, sized, and
+                styled to communicate a message effectively.
+            </div>
+
+            <h3>The Three Responsibilities of Typography</h3>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h4>1. Legibility</h4>
+                    <p><strong>Can the reader see and distinguish individual letters?</strong></p>
+                    <ul style="font-size: 0.95rem;">
+                        <li>Typeface design (serifs, stroke weight, x-height)</li>
+                        <li>Font size relative to viewing distance</li>
+                        <li>Color contrast against background</li>
+                        <li>Distinguishability of tricky pairs (l vs. I, O vs. 0)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>2. Readability</h4>
+                    <p><strong>Can the reader understand and process text comfortably?</strong></p>
+                    <ul style="font-size: 0.95rem;">
+                        <li>Line length (too wide = hard to follow)</li>
+                        <li>Line spacing / leading</li>
+                        <li>Paragraph spacing</li>
+                        <li>Font choice (serifs for long text, sans-serif for web)</li>
+                        <li>Alignment and white space</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>3. Expression</h4>
+                    <p><strong>Does the typography convey the right tone and emotion?</strong></p>
+                    <ul style="font-size: 0.95rem;">
+                        <li>Font personality (elegant, bold, playful, serious)</li>
+                        <li>Weight (bold = strength, light = refinement)</li>
+                        <li>Color and contrast choices</li>
+                        <li>Creative use of scale and hierarchy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <blockquote>
+                "Typography is the craft of endowing human language with a durable visual form." — Robert Bringhurst
+            </blockquote>
+        </section>
+
+        <!-- SECTION 2: HISTORY -->
+        <section id="history">
+            <h2>A Brief History of Type</h2>
+            <p>Understanding where fonts come from helps you understand what they're designed for.</p>
+
+            <h3>The Eras</h3>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Gutenberg (1440)</h4>
+                    <p>Johannes Gutenberg invents movable type and the printing press. Early typefaces mimic
+                        handwriting. Serifs appear as a side effect of metal casting—they helped the typeface sit
+                        properly on the metal slug.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;"><strong>Result:</strong> Serif fonts
+                        born from necessity</p>
+                </div>
+
+                <div class="card">
+                    <h4>Industrial Era (1800s)</h4>
+                    <p>Factories need bold, heavy fonts for signage and posters. Sans-serif fonts emerge (first called
+                        "grotesques"). High contrast fonts designed for legibility from afar.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;"><strong>Result:</strong> Bold
+                        sans-serifs dominate advertising</p>
+                </div>
+
+                <div class="card">
+                    <h4>Digital Age (1980s-2000s)</h4>
+                    <p>Computers change everything. Screen resolution matters—thin serifs can look jagged on pixels.
+                        Web-safe fonts emerge (Arial, Georgia, Verdana). Digital typefaces designed specifically for
+                        screen rendering.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;"><strong>Result:</strong>
+                        Screen-optimized type standards</p>
+                </div>
+
+                <div class="card">
+                    <h4>Modern Web (2010+)</h4>
+                    <p>Custom web fonts become standard (@font-face in CSS). Variable fonts allow smooth weight
+                        variations. Responsive typography (sizing changes with device). Performance optimization matters
+                        (font file sizes).</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;"><strong>Result:</strong> Unlimited
+                        creative freedom on the web</p>
+                </div>
+            </div>
+
+            <h3>Why History Matters</h3>
+            <p>A typeface created in 1450 for metal casting behaves completely differently than one designed in 2020 for
+                mobile screens. Understanding a font's origin tells you what it's optimized for.</p>
+        </section>
+
+        <!-- SECTION 3: CLASSIFICATIONS -->
+        <section id="classifications">
+            <h2>Typeface Classifications</h2>
+
+            <h3>Serif Typefaces</h3>
+            <p><strong>Small lines (serifs) extend from the ends of letterstrokes.</strong></p>
+
+            <div class="comparison">
+                <div class="comparison-item">
+                    <h4 style="border-bottom-color: #563d7c;">SERIF EXAMPLE</h4>
+                    <div
+                        style="text-align: center; padding: 2rem; background: white; border-radius: 8px; border: 1px solid #dee2e6;">
+                        <div style="font-family: Georgia, serif; font-size: 4rem; color: #333; line-height: 1;">
+                            Abc
+                        </div>
+                        <p style="font-family: Georgia, serif; font-size: 1.2rem; color: #666; margin-top: 1rem;">
+                            Georgia: Designed for screen readability with clear serifs.
+                        </p>
+                    </div>
+                </div>
+                <div class="comparison-item">
+                    <div style="padding: 20px; background: #f8f9fa; border-radius: 6px;">
+                        <h4 style="margin-top: 0; color: #563d7c;">Psychology</h4>
+                        <ul>
+                            <li>Convey tradition, authority, elegance</li>
+                            <li>Associated with institutions (newspapers, law, academia)</li>
+                            <li>Feel "established" and "reliable"</li>
+                        </ul>
+                        <h4 style="color: #563d7c;">Best Uses</h4>
+                        <ul>
+                            <li>Long-form reading (books, novels, academic papers)</li>
+                            <li>Professional documents (resumes, business letters)</li>
+                            <li>Print design (magazines, newspapers)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Sans-Serif Typefaces</h3>
+            <p><strong>No serifs — clean, minimalist letterforms.</strong></p>
+
+            <div class="comparison">
+                <div class="comparison-item sans-serif">
+                    <h4 style="border-bottom-color: #0056b3;">SANS-SERIF EXAMPLE</h4>
+                    <div
+                        style="text-align: center; padding: 2rem; background: white; border-radius: 8px; border: 1px solid #dee2e6;">
+                        <div
+                            style="font-family: Arial, sans-serif; font-size: 4rem; color: #333; line-height: 1; font-weight: bold;">
+                            Abc
+                        </div>
+                        <p style="font-family: Arial, sans-serif; font-size: 1.2rem; color: #666; margin-top: 1rem;">
+                            Arial: Clean, functional, and ubiquitous in digital design.
+                        </p>
+                    </div>
+                </div>
+                <div class="comparison-item">
+                    <div style="padding: 20px; background: #f8f9fa; border-radius: 6px;">
+                        <h4 style="margin-top: 0; color: #0056b3;">Psychology</h4>
+                        <ul>
+                            <li>Convey modernity, clarity, approachability</li>
+                            <li>Feel contemporary and friendly</li>
+                            <li>Associated with technology and innovation</li>
+                        </ul>
+                        <h4 style="color: #0056b3;">Best Uses</h4>
+                        <ul>
+                            <li>Web and digital design</li>
+                            <li>Contemporary branding (tech, startups, lifestyle)</li>
+                            <li>UI/UX (user interfaces, apps)</li>
+                            <li>Headlines and posters</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Display & Decorative Fonts</h3>
+            <div class="alert warning">
+                <strong>⚠️ Critical Rule:</strong> Display fonts are for headlines, titles, and short text ONLY. Never
+                use for body copy. Never use for long paragraphs. They're designed for impact, not comfort.
+            </div>
+
+            <h3>Script & Handwritten Fonts</h3>
+            <div class="alert warning">
+                <strong>⚠️ Use Sparingly:</strong> A sentence in script? Elegant. A paragraph? Exhausting. Never use
+                script for body copy.
+            </div>
+        </section>
+
+        <!-- SECTION 4: TYPE ANATOMY -->
+        <section id="anatomy">
+            <h2>Type Anatomy: The Language of Letterforms</h2>
+            <p>Before using fonts, you need to <strong>see them clearly</strong>. Understanding type anatomy is the
+                foundation of typography mastery.</p>
+
+            <div class="anatomy-container">
+                <div class="anatomy-visual" style="font-family: Georgia, serif; position: relative;">
+                    <div style="position: relative; display: inline-block; height: 200px;">
+                        <span>Hg</span>
+
+                        <!-- BASELINE -->
+                        <div
+                            style="position: absolute; bottom: 0; left: -20px; right: -20px; height: 2px; background: #dc3545;">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 600; color: #dc3545; white-space: nowrap;">
+                            Baseline</div>
+
+                        <!-- CAP HEIGHT -->
+                        <div
+                            style="position: absolute; top: 10px; left: -20px; right: -20px; height: 2px; background: #0056b3;">
+                        </div>
+                        <div
+                            style="position: absolute; top: 15px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 600; color: #0056b3; white-space: nowrap;">
+                            Cap Height</div>
+
+                        <!-- X-HEIGHT -->
+                        <div
+                            style="position: absolute; top: 75px; left: -20px; right: -20px; height: 2px; background: #28a745;">
+                        </div>
+                        <div
+                            style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 600; color: #28a745; white-space: nowrap;">
+                            X-Height</div>
+                    </div>
+                </div>
+
+                <div class="anatomy-labels-list">
+                    <div class="label-item">
+                        <p><strong>Baseline:</strong> The imaginary line that letters sit on. Descenders drop below it.
+                        </p>
+                    </div>
+                    <div class="label-item">
+                        <p><strong>Cap Height:</strong> The height of uppercase letters (H, M). Not the same as
+                            x-height.</p>
+                    </div>
+                    <div class="label-item">
+                        <p><strong>X-Height:</strong> The height of lowercase letters without ascenders or descenders
+                            (x, a, e). Crucial for readability. Larger x-height = easier to read at small sizes.</p>
+                    </div>
+                    <div class="label-item">
+                        <p><strong>Ascender:</strong> The part of letters like "b," "d," "k," "l" that rises above the
+                            x-height.</p>
+                    </div>
+                    <div class="label-item">
+                        <p><strong>Descender:</strong> The part of letters like "g," "p," "q," "y," "j" that drops below
+                            the baseline.</p>
+                    </div>
+                    <div class="label-item">
+                        <p><strong>Counter:</strong> The enclosed space inside a letter (the "hole" in "o", "a", "P").
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert info">
+                <strong>Why It Matters:</strong> Large x-height = readable at small sizes (good for body text). Small
+                x-height = elegant but harder to read small (use for headlines only). Understanding anatomy = choosing
+                fonts that actually work for your purpose.
+            </div>
+        </section>
+
+        <!-- SECTION 5: THE THREE SPACINGS -->
+        <section id="spacing">
+            <h2>The Three Spacings: Kerning, Tracking & Leading</h2>
+            <p>These three concepts are foundational to professional typography.</p>
+
+            <h3>1. Kerning</h3>
+            <p><strong>The spacing between specific letter pairs.</strong></p>
+            <p>The letters "A" and "V" naturally have too much space between them. Their diagonal shapes create a gap.
+                Kerning tightens this relationship.</p>
+
+            <div class="spacing-demo">
+                <p class="label">❌ Bad kerning (too loose):</p>
+                <p class="kerning-before">AV</p>
+
+                <p class="label" style="margin-top: 25px;">✅ Correct kerning (adjusted):</p>
+                <p class="kerning-after">AV</p>
+            </div>
+
+            <div class="alert success">
+                <strong>Professional Kerning is the difference between amateur and polished.</strong> Automatic kerning
+                (what design software does by default) is rarely perfect. Headlines especially need manual kerning
+                adjustment.
+            </div>
+
+            <h3>Problem Kerning Pairs</h3>
+            <div class="alert info">
+                <strong>These letter combinations need special attention:</strong> AV, AW, AT, AC (any letter before V,
+                W, T) • Ty, To, Te (T before rounded/rounded letters) • We, Wo, Wa (W with following letters) • Ye, Yo,
+                Ya • LT, LA, LY • VA, VE, VO • PA, PE, PO
+            </div>
+
+            <h3 style="margin-top: 40px;">2. Tracking</h3>
+            <p><strong>The overall spacing between all letters.</strong></p>
+
+            <div class="spacing-demo">
+                <p class="label">Loose tracking:</p>
+                <p style="letter-spacing: 0.1em; font-size: 24px; margin: 10px 0; color: #333;">SPACING</p>
+
+                <p class="label" style="margin-top: 15px;">Normal tracking:</p>
+                <p style="letter-spacing: 0; font-size: 24px; margin: 10px 0; color: #333;">SPACING</p>
+
+                <p class="label" style="margin-top: 15px;">Tight tracking:</p>
+                <p style="letter-spacing: -0.05em; font-size: 24px; margin: 10px 0; color: #333;">SPACING</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">3. Leading (Line Height)</h3>
+            <p><strong>The vertical space between lines of text.</strong></p>
+
+            <div class="spacing-demo">
+                <p class="label">Too tight (leading = 1.0):</p>
+                <p style="line-height: 1.0; color: #333; margin: 10px 0;">The quick brown fox jumps over the lazy dog.
+                    The quick brown fox jumps over the lazy dog.</p>
+
+                <p class="label" style="margin-top: 15px;">Good (leading = 1.5):</p>
+                <p style="line-height: 1.5; color: #333; margin: 10px 0;">The quick brown fox jumps over the lazy dog.
+                    The quick brown fox jumps over the lazy dog.</p>
+
+                <p class="label" style="margin-top: 15px;">Too loose (leading = 2.0):</p>
+                <p style="line-height: 2.0; color: #333; margin: 10px 0;">The quick brown fox jumps over the lazy dog.
+                    The quick brown fox jumps over the lazy dog.</p>
+            </div>
+
+            <div class="alert info">
+                <strong>Recommended line height: 1.125–1.200× the font size</strong> for comfortable readability. These
+                three spacings are the difference between amateur and professional typography.
+            </div>
+        </section>
+
+        <!-- SECTION 6: VISUAL HIERARCHY -->
+        <section id="hierarchy">
+            <h2>Visual Hierarchy: Guiding the Reader</h2>
+            <p>Hierarchy distinguishes different levels of importance. Organize information using contrasting
+                typographic contrast to emphasize certain words or groups of words as more or less important than
+                others.</p>
+
+            <h3>The Hierarchy Pyramid</h3>
+
+            <div class="hierarchy-visual">
+                <div class="hierarchy-level primary">
+                    PRIMARY
+                    <div class="hierarchy-description">Largest, boldest, most prominent — What viewers see FIRST</div>
+                </div>
+
+                <div class="hierarchy-level secondary">
+                    SECONDARY
+                    <div class="hierarchy-description">Medium size, supporting role — What clarifies the primary</div>
+                </div>
+
+                <div class="hierarchy-level tertiary">
+                    TERTIARY
+                    <div class="hierarchy-description">Smallest, least prominent — Details & context</div>
+                </div>
+
+                <div class="hierarchy-level quaternary">
+                    QUATERNARY
+                    <div class="hierarchy-description">Fine print & legal</div>
+                </div>
+            </div>
+
+            <h3>The 70-20-10 Rule</h3>
+            <p>In any layout, approximately:</p>
+            <ul>
+                <li><strong>70% of visual attention</strong> goes to the primary element (headline, title, most
+                    important info)</li>
+                <li><strong>20% of visual attention</strong> goes to secondary elements (subheading, supporting
+                    information)</li>
+                <li><strong>10% of visual attention</strong> goes to tertiary elements (details, fine print)</li>
+            </ul>
+
+            <h3>Five Techniques for Creating Hierarchy (Without Color)</h3>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h4>1. SIZE</h4>
+                    <p>Primary text is 3-5x larger than body text. Clear size jumps between levels (don't use subtle
+                        differences).</p>
+                </div>
+
+                <div class="card">
+                    <h4>2. WEIGHT</h4>
+                    <p>Primary uses bold or extra-bold (700-900). Secondary uses semi-bold or bold (600-700). Tertiary
+                        uses regular or light (400-500).</p>
+                </div>
+
+                <div class="card">
+                    <h4>3. SCALE & PROPORTION</h4>
+                    <p>Dramatic size difference = dramatic importance. Subtle size difference = subtle importance. Space
+                        around an element defines its importance (isolation = emphasis).</p>
+                </div>
+
+                <div class="card">
+                    <h4>4. ALIGNMENT & PLACEMENT</h4>
+                    <p>Center alignment = formal, important. Left alignment = active, dynamic, default for body copy.
+                        Strategic placement at top/center/bottom affects importance.</p>
+                </div>
+
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h4>5. SPACING & DENSITY</h4>
+                    <p>Tight spacing = compressed, urgent, active. Generous spacing = open, refined, important. Use
+                        white space to "frame" important information.</p>
+                </div>
+            </div>
+
+            <h3>Font Weight & Width Variations</h3>
+            <p>Moving beyond simple bolding, modern typefaces often come in "superfamilies" with multiple weights and
+                widths.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Weights</h4>
+                    <ul>
+                        <li><strong>Hairline/Thin (100):</strong> Decorative only</li>
+                        <li><strong>Light (300):</strong> Elegant, modern</li>
+                        <li><strong>Regular (400):</strong> Standard reading</li>
+                        <li><strong>Bold (700):</strong> Strong emphasis</li>
+                        <li><strong>Black/Heavy (900):</strong> Maximum impact</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Widths</h4>
+                    <ul>
+                        <li><strong>Condensed:</strong> Space-saving, technical</li>
+                        <li><strong>Regular:</strong> Most natural reading</li>
+                        <li><strong>Extended:</strong> Luxurious, wide, dramatic</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: FORMATS -->
+        <section id="formats">
+            <h2>Typography Across Formats</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Print Design</h4>
+                    <ul>
+                        <li><strong>Body Font:</strong> Serif (traditionally better for eyes on paper)</li>
+                        <li><strong>Size:</strong> 8pt – 12pt (feels smaller on paper than screen)</li>
+                        <li><strong>Leading:</strong> 120-130% (tighter)</li>
+                        <li><strong>Contrast:</strong> CMYK black on white stock</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Digital / Web</h4>
+                    <ul>
+                        <li><strong>Body Font:</strong> Sans-Serif (renders cleaner on pixels)</li>
+                        <li><strong>Size:</strong> 16px – 18px (standard minimums)</li>
+                        <li><strong>Leading:</strong> 140-160% (more space for backlit reading)</li>
+                        <li><strong>Accessibility:</strong> Color contrast ratios (WCAG)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: TYPEFACE PAIRING -->
+        <section id="pairing">
+            <h2>Typeface Pairing: Making Fonts Work Together</h2>
+            <p>Choosing typefaces that complement each other is a critical skill. The goal is to create visual
+                structure, enhance readability, and strengthen your design's impact.</p>
+
+            <h3>Successful Pairing Strategies</h3>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Serif + Sans-Serif (The Classic)</h4>
+                    <p><strong>Primary:</strong> Serif for headlines (traditional, authoritative)</p>
+                    <p><strong>Secondary:</strong> Sans-serif for body (modern, clean)</p>
+                    <p><strong>Example:</strong> Playfair Display + Open Sans</p>
+                </div>
+
+                <div class="card">
+                    <h4>Contrasting Sans-Serif Styles</h4>
+                    <p><strong>Primary:</strong> Display sans-serif (geometric, bold)</p>
+                    <p><strong>Secondary:</strong> Humanist sans-serif (friendly, open)</p>
+                    <p><strong>Example:</strong> Montserrat + Lato</p>
+                </div>
+
+                <div class="card">
+                    <h4>Heavy Display + Light Supporting</h4>
+                    <p><strong>Primary:</strong> Bold, expressive display font</p>
+                    <p><strong>Secondary:</strong> Refined, elegant font</p>
+                    <p><strong>Example:</strong> Bebas Neue + Garamond</p>
+                </div>
+
+                <div class="card">
+                    <h4>Same Family, Different Weights</h4>
+                    <p><strong>Primary:</strong> Bold or italic version</p>
+                    <p><strong>Secondary:</strong> Regular or light version</p>
+                    <p><strong>Example:</strong> Open Sans Bold + Open Sans Regular</p>
+                </div>
+            </div>
+
+            <div class="alert warning">
+                <strong>Pairing Don'ts:</strong>
+                <ul>
+                    <li>❌ Don't pair two serif fonts (unless intentional, can feel dated)</li>
+                    <li>❌ Don't pair two display fonts (visual chaos)</li>
+                    <li>❌ Don't pair fonts too similar (confusing, no contrast)</li>
+                    <li>❌ Don't pair fonts too different (visual discord, no harmony)</li>
+                    <li>❌ Don't use more than 3 typefaces (loss of coherence)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 8: RESOURCES -->
+        <section id="resources">
+            <h2>Resources & References</h2>
+            <p>These curated resources provide excellent visual guides and interactive tools for understanding
+                typography:</p>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>Type Anatomy Visual Guide</h4>
+                    <p>Comprehensive visual reference for understanding the parts of letters and how they work together.
+                    </p>
+                    <a href="https://visme.co/blog/type-anatomy/" target="_blank">View Guide →</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Figma: Ultimate Guide to Typography</h4>
+                    <p>Professional visual demonstrations and best practices from the Figma design team.</p>
+                    <a href="https://www.figma.com/resource-library/typography-in-design/" target="_blank">View Guide
+                        →</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Toptal: Typographic Hierarchy</h4>
+                    <p>Visual examples of hierarchy in action, showing how typography guides readers through
+                        information.</p>
+                    <a href="https://www.toptal.com/designers/typography/typographic-hierarchy" target="_blank">View
+                        Guide →</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Canva: Font Pairing Guide</h4>
+                    <p>Interactive examples and principles for choosing typefaces that work well together.</p>
+                    <a href="https://www.canva.com/learn/the-ultimate-guide-to-font-pairing/" target="_blank">View Guide
+                        →</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Font Pair Interactive Tool</h4>
+                    <p>Discover and test free Google Font pairings. Browse over 1,000 curated combinations.</p>
+                    <a href="https://fontpair.co/" target="_blank">Try Tool →</a>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Fontjoy Font Pairing Generator</h4>
+                    <p>AI-powered tool that generates font combinations. Mix and match for perfect pairings.</p>
+                    <a href="https://fontjoy.com/" target="_blank">Try Tool →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: ACCESSIBILITY -->
+        <section id="accessibility">
+            <h2>Accessible Typography</h2>
+            <p>Design is only effective if it's usable by everyone. Accessible typography ensures your content is
+                readable
+                for people with visual impairments or cognitive disabilities.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Contrast Ratios</h4>
+                    <p>Ensure high contrast between text and background. Aim for a <strong>4.5:1 ratio</strong> for
+                        normal
+                        text and <strong>3:1</strong> for large text.</p>
+                </div>
+                <div class="card">
+                    <h4>Minimum Font Size</h4>
+                    <p>Never go below <strong>12px</strong> for any text. For body copy on web, <strong>16px</strong> is
+                        the
+                        modern standard for accessibility.</p>
+                </div>
+                <div class="card">
+                    <h4>Limit All Caps</h4>
+                    <p>ALL CAPS text is harder to read for long passages because it removes the distinct shapes
+                        (ascenders/descenders) of lowercase letters.</p>
+                </div>
+                <div class="card">
+                    <h4>Line Length (Measure)</h4>
+                    <p>Keep lines between <strong>45-75 characters</strong>. Lines that are too long make it difficult
+                        for
+                        the eye to find the next line.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav style="text-align: center; padding: 20px 0; border-bottom: 1px solid #dee2e6; margin-bottom: 40px;">
+            <a href="typography-canvas.html"
+                style="display: inline-block; padding: 8px 16px; color: #563d7c; text-decoration: none; font-weight: 500; font-size: 13px; background-color: #f8f9fa; border-radius: 4px; transition: background-color 0.2s;">←
+                Back to Interactive Introduction</a>
+        </nav>
+
+        <!-- FOOTER -->
+        <footer>
+            <h3 style="color: #333; margin-top: 0;">Ready for the next step?</h3>
+            <p>Now that you understand typography fundamentals, move to the <strong>Module 3 Assignments</strong> to
+                apply these concepts:</p>
+            <ul style="list-style: none; margin-top: 20px;">
+                <li><strong>Part 1: Typeface Specimen & Exploration</strong> — Explore a single typeface deeply</li>
+                <li><strong>Part 2: Typographic Hierarchy & Communication</strong> — Organize information using multiple
+                    typefaces</li>
+            </ul>
+            <p style="margin-top: 30px; border-top: 2px solid #dee2e6; padding-top: 20px;">
+                <small>Module 3 — Digital Visual Arts | School of Computer Studies | University of San
+                    Jose-Recoletos</small>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
